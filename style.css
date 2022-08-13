@@ -25,7 +25,7 @@ main {
   justify-content: center;
 }
 main .card {
-  width: 435px;
+  width: clamp(365px, 50%, 700px);
   height: 420px;
   background-color: #fff;
   z-index: 99999;
@@ -41,14 +41,53 @@ main .card .top-banner {
   height: 38%;
 }
 main .card .profile {
-  height: 130px;
-  width: 130px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
   border: 6px solid #fff;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 25%;
+}
+main .card .content {
+  padding-top: 25%;
+  width: 100%;
+  text-align: center;
+}
+main .card .content .name {
+  font-weight: var(--f700);
+}
+main .card .content .name .age {
+  font-weight: var(--f400);
+  margin-left: 10px;
+  color: var(--d-gray);
+}
+main .card .content .place {
+  font-weight: var(--f400);
+  color: var(--d-gray);
+  margin-top: 10px;
+}
+main .card .content .hr {
+  background-color: var(--d-gray);
+  margin-top: 26px;
+  height: 1px;
+  width: 100%;
+}
+main .card .content .stats {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100px;
+  font-weight: var(--f700);
+}
+main .card .content .stats p {
+  line-height: 26px;
+}
+main .card .content .stats .not-bold {
+  font-weight: var(--f400);
+  color: var(--d-gray);
 }
 
 .bg-top {
@@ -69,4 +108,10 @@ main .card .profile {
 .bg-bottom img {
   height: 850px;
   position: inherit;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-top {
+    left: -476px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -23,7 +23,7 @@ main {
   align-items: center;
   justify-content: center;
   .card {
-    width: 435px;
+    width: clamp(365px, 50%, 700px);
     height: 420px;
     background-color: #fff;
     z-index: 99999;
@@ -38,14 +38,58 @@ main {
       height: 38%;
     }
     .profile {
-      height: 130px;
-      width: 130px;
+      height: 110px;
+      width: 110px;
       border-radius: 50%;
       border: 6px solid #fff;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 25%;
+    }
+    .content {
+      padding-top: 25%;
+      width: 100%;
+      text-align: center;
+
+      .name {
+        font-weight: var(--f700);
+
+        .age {
+          font-weight: var(--f400);
+          margin-left: 10px;
+          color: var(--d-gray);
+        }
+      }
+      .place {
+        font-weight: var(--f400);
+        color: var(--d-gray);
+        margin-top: 10px;
+      }
+      .hr {
+        background-color: var(--d-gray);
+        margin-top: 26px;
+        height: 1px;
+        width: 100%;
+      }
+      .stats {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        // padding: 0 40px;
+
+        min-height: 100px;
+        font-weight: var(--f700);
+        p {
+          line-height: 26px;
+        }
+        .not-bold {
+          font-weight: var(--f400);
+
+          color: var(--d-gray);
+        }
+      }
     }
   }
 }
@@ -69,5 +113,11 @@ main {
   img {
     height: 850px;
     position: inherit;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .bg-top {
+    left: -476px;
   }
 }
