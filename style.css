@@ -26,7 +26,7 @@ main {
 }
 main .card {
   width: clamp(365px, 50%, 700px);
-  height: 420px;
+  min-height: 420px;
   background-color: #fff;
   z-index: 99999;
   border-radius: 20px;
@@ -38,7 +38,7 @@ main .card {
 main .card .top-banner {
   width: 100%;
   background: url("./images/bg-pattern-card.svg");
-  height: 38%;
+  height: 200px;
 }
 main .card .profile {
   height: 110px;
@@ -48,10 +48,10 @@ main .card .profile {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 25%;
+  top: 29%;
 }
 main .card .content {
-  padding-top: 25%;
+  padding-top: clamp(40px, 25%, 100px);
   width: 100%;
   text-align: center;
 }
