@@ -48,7 +48,7 @@ main {
       top: 29%;
     }
     .content {
-      padding-top: clamp(40px,25%,100px);
+      padding-top: clamp(40px, 25%, 100px);
       width: 100%;
       text-align: center;
 
@@ -99,6 +99,7 @@ main {
   top: -405px;
   left: -200px;
 
+  transition: left 0.5s ease-in;
   img {
     height: 800px;
     position: inherit;
@@ -119,5 +120,6 @@ main {
 @media screen and (max-width: 576px) {
   .bg-top {
     left: -476px;
+    transition: left 0.5s ease-in;
   }
 }

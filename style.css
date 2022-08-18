@@ -94,6 +94,7 @@ main .card .content .stats .not-bold {
   position: absolute;
   top: -405px;
   left: -200px;
+  transition: left 0.5s ease-in;
 }
 .bg-top img {
   height: 800px;
@@ -113,5 +114,6 @@ main .card .content .stats .not-bold {
 @media screen and (max-width: 576px) {
   .bg-top {
     left: -476px;
+    transition: left 0.5s ease-in;
   }
 }/*# sourceMappingURL=style.css.map */
